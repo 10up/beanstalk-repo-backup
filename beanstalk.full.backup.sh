@@ -29,6 +29,7 @@
 #password=generated-beanstalk-token
 
 # Destination directories for backups
+# (PLEASE INCLUDE TRAILING SLASH)
 SVNDIR=/tmp/repos/svnbackup/ #Intermediate storage for svn
 GITDIR=/tmp/repos/gitbackup/ #Intermediate storage for git
 BACKUPDIR=/tmp/repos/repobackup/ #Final destination for compressed backups
@@ -73,7 +74,7 @@ if [ -d ${SVNDIR} ]
 then
         cd ${SVNDIR}
         gzip -9 *
-        mv ${SVNDIR} ${BACKUPDIR}
+        mv ${SVNDIR}*.gz ${BACKUPDIR}
 fi
 
 # Cleanup
