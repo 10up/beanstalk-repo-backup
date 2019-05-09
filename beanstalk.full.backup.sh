@@ -41,7 +41,7 @@ REPOS=($(curl -u ${username}:${password} -H "Content-Type: application/json" htt
 for R in "${REPOS[@]}"
 do
         NQ=$(echo "$R" | tr -d '"')
-        if (echo "$NQ" | grep 10up.svn)
+        if (echo "$NQ" | grep .svn)
         then
                 [ -d ${SVNDIR} ] || mkdir -p ${SVNDIR}
                 cd ${SVNDIR}
