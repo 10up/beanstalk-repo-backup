@@ -1,5 +1,5 @@
 # Beanstalk Backup Script
-Script to backup repositories (SVN and Git) from Beanstalk using the Beanstalk API.  This script downloads all of the repos from your account and compresses them. 
+Beanstalk is a hosted Git and Subversion repository service (https://beanstalkapp.com/).  This script will backup repositories (SVN and Git) from Beanstalk using the Beanstalk API.  
 
 ## Dependencies
 * curl
